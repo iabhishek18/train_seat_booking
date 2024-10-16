@@ -1,0 +1,172 @@
+/* Main Container Styles */
+.booking-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Input and Button Styles */
+.input-container {
+  margin: 20px 0;
+}
+
+input[type="number"] {
+  padding: 10px;
+  width: 60px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="number"]:focus {
+  border-color: #007bff;
+}
+
+.book-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Seat Grid Styles */
+.seats-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4edda;
+  border-radius: 8px;
+  border: 2px solid #28a745;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.seat.available:hover {
+  background-color: #c3e6cb;
+  transform: scale(1.1);
+}
+
+.seat.booked {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+}
+
+.seat.booked:hover {
+  cursor: not-allowed;
+  transform: none;
+}
+
+.seat::after {
+  content: attr(data-seat);
+  position: absolute;
+  top: -25px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.seat:hover::after {
+  opacity: 1;
+}
+
+/* Booked Seats Section */
+.booked-seats {
+  margin: 20px 0;
+}
+
+.booked-seats ul {
+  list-style: none;
+  padding: 0;
+}
+
+.booked-seats li {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.booked-seats li:hover {
+  background-color: #0056b3;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-weight: bold;
+  animation: shake 0.5s;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shake Animation for Errors */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
