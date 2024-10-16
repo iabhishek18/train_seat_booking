@@ -39,7 +39,7 @@ Make sure the following software is installed on your system before proceeding:
    node app.js
    ```
 
-   The backend should now be running at `http://localhost:3000` or the port specified in the app configuration.
+   The backend is deployed at [https://train-booking-2.onrender.com](https://train-booking-2.onrender.com).
 
 ### Frontend Setup
 
@@ -54,9 +54,12 @@ Make sure the following software is installed on your system before proceeding:
    - If it's a simple HTML file, you can open the file directly in your browser, or:
    - If you're using a frontend framework (like React, Angular, etc.), follow the respective steps to start the frontend server (e.g., `npm start` if React is used).
 
+   The frontend is also deployed at [https://trains-seat-booking.netlify.app/](https://trains-seat-booking.netlify.app/).
+
 ---
 
 ## Notes
 
 - Ensure that the backend server is running before starting the frontend so that the APIs can be accessed properly.
 - Both servers need to be run in parallel for the system to work end-to-end.
+
